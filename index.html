@@ -20,7 +20,7 @@
   --bg:#f5f7fb;--bg2:#eaf0f8;--card:rgba(255,255,255,.82);--text:#101827;
   --muted:#5d6b80;--line:rgba(16,24,39,.12);--accent:#0891b2;--accent2:#7c3aed;
 }
-*{box-sizing:border-box;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{
   background:radial-gradient(circle at 10% 5%,rgba(103,232,249,.13),transparent 30%),
@@ -37,20 +37,16 @@ nav{display:flex;justify-content:space-between;align-items:center;height:72px}
 .logo{font:800 1.35rem var(--display);text-decoration:none;letter-spacing:-.03em}
 .logo span{color:var(--accent)}
 .nav-right{display:flex;align-items:center;gap:20px}
-nav ul{display:flex;gap:25px;list-style:none;padding:0}
+nav ul{display:flex;gap:20px;list-style:none;padding:0;flex-wrap:wrap}
 nav ul a{text-decoration:none;font-weight:600;font-size:.92rem;color:var(--muted);transition:.2s}
 nav ul a:hover{color:var(--accent)}
-.theme-toggle{
-  width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--card);
-  color:var(--text);cursor:pointer;font-size:1.05rem;display:grid;place-items:center;transition:.2s
-}
+
 .theme-toggle {
   border: 0;
   padding: 0;
   background: transparent;
   cursor: pointer;
 }
-
 .toggle-track {
   width: 58px;
   height: 32px;
@@ -77,37 +73,65 @@ nav ul a:hover{color:var(--accent)}
   transition: .3s ease;
   font-size: 15px;
 }
+.sun-icon { display: none; }
+[data-theme="light"] .toggle-track { background: #dbeafe; border-color: rgba(8,145,178,.22); }
+[data-theme="light"] .toggle-thumb { left: 29px; background: #ffffff; color: #f59e0b; }
+[data-theme="light"] .moon-icon { display: none; }
+[data-theme="light"] .sun-icon { display: block; }
 
-.sun-icon {
-  display: none;
-}
+/* Fixed Layout & Hero Sections */
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+.hero{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:center;padding:60px 0}
+@media(max-width:768px){.hero{grid-template-columns:1fr;text-align:center}}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;color:var(--accent);font-weight:600;margin-bottom:12px}
+.dot{width:8px;height:8px;background:var(--green);border-radius:50%}
+h1{font:800 2.5rem/1.2 var(--display);margin-bottom:16px}
+h1 .name{display:block}
+h1 .role{display:block;color:var(--accent);font-size:1.6rem;font-weight:700}
+.lead{font-size:1.1rem;color:var(--muted);margin-bottom:24px;max-width:580px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+@media(max-width:768px){.btns{justify-content:center}}
+.btn{padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.95rem;transition:.2s}
+.btn.primary{background:var(--accent);color:#07111f}
+.btn.ghost{border:1px solid var(--line);background:var(--card)}
 
-[data-theme="light"] .toggle-track {
-  background: #dbeafe;
-  border-color: rgba(8,145,178,.22);
-}
+/* Image Fix */
+.profile-wrap{display:flex;justify-content:center}
+.profile-card{width:280px;height:280px;border-radius:24px;overflow:hidden;border:2px solid var(--line);box-shadow:0 12px 32px rgba(0,0,0,.3)}
+.profile-card img{width:100%;height:100%;object-fit:cover;display:block}
 
-[data-theme="light"] .toggle-thumb {
-  left: 29px;
-  background: #ffffff;
-  color: #f59e0b;
-}
+/* Section Components */
+h2{font:800 1.8rem var(--display);margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:24px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+@media(max-width:768px){.about{grid-template-columns:1fr}}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{background:var(--card);padding:18px;border-radius:14px;border:1px solid var(--line);text-align:center}
+.stat strong{display:block;font-size:1.6rem;color:var(--accent)}
+.stat span{font-size:.85rem;color:var(--muted)}
 
-[data-theme="light"] .moon-icon {
-  display: none;
-}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.group{background:var(--card);padding:20px;border-radius:14px;border:1px solid var(--line)}
+.group h3{font-size:1.05rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
+.chips li{padding:4px 12px;background:rgba(255,255,255,.06);border-radius:6px;font-size:.85rem}
+.chips li.main{border:1px solid var(--accent);color:var(--accent)}
 
-[data-theme="light"] .sun-icon {
-  display: block;
-}
+.job{background:var(--card);padding:24px;border-radius:16px;border:1px solid var(--line)}
+.job-top{display:flex;justify-style:space-between;justify-content:space-between;align-items:center;margin-bottom:8px}
+.when{font-size:.85rem;color:var(--accent);font-family:var(--mono)}
+.where{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.job ul{padding-left:20px}
+.job li{margin-bottom:8px}
 
-.theme-toggle:hover .toggle-track {
-  border-color: var(--accent);
-}
+.edu{display:grid;gap:14px}
+.edu div{background:var(--card);padding:16px;border-radius:12px;border:1px solid var(--line);display:flex;flex-direction:column}
+.edu span{color:var(--muted);font-size:.9rem}
 
-.theme-toggle:active .toggle-thumb {
-  transform: scale(.9);
-}
+.contact-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.contact-list a{background:var(--card);padding:16px;border-radius:12px;border:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;font-weight:600}
+.contact-list small{color:var(--muted);font-weight:400;margin-top:4px}
+footer{padding:32px 0;text-align:center;color:var(--muted);font-size:.9rem}
 </style>
 </head>
 <body>
@@ -123,13 +147,13 @@ nav ul a:hover{color:var(--accent)}
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
-  <span class="toggle-track">
-    <span class="toggle-thumb">
-      <span class="moon-icon">☾</span>
-      <span class="sun-icon">☀</span>
-    </span>
-  </span>
-</button>
+          <span class="toggle-track">
+            <span class="toggle-thumb">
+              <span class="moon-icon">☾</span>
+              <span class="sun-icon">☀</span>
+            </span>
+          </span>
+        </button>
       </div>
     </nav>
 </header>
@@ -224,6 +248,7 @@ nav ul a:hover{color:var(--accent)}
 </main>
 
 <footer><div class="wrap">© 2026 Ehtisham Younas</div></footer>
+
 <script>
 (function(){
   const root = document.documentElement;
@@ -234,17 +259,20 @@ nav ul a:hover{color:var(--accent)}
 
   function applyTheme(value){
     root.setAttribute("data-theme", value);
-    
-    button.button.classList.toggle("light-active", value === "light");("aria-label", value === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    if(button){
+      button.setAttribute("aria-label", value === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    }
   }
 
   applyTheme(theme);
 
-  button.addEventListener("click", function(){
-    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    localStorage.setItem("portfolio-theme", next);
-    applyTheme(next);
-  });
+  if(button){
+    button.addEventListener("click", function(){
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      localStorage.setItem("portfolio-theme", next);
+      applyTheme(next);
+    });
+  }
 })();
 </script>
 </body>
