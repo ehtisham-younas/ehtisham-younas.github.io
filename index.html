@@ -44,62 +44,70 @@ nav ul a:hover{color:var(--accent)}
   width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:var(--card);
   color:var(--text);cursor:pointer;font-size:1.05rem;display:grid;place-items:center;transition:.2s
 }
-.theme-toggle:hover{border-color:var(--accent);transform:translateY(-2px)}
-.hero{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center;min-height:calc(100vh - 72px);padding:70px 0 85px}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid rgba(103,232,249,.25);border-radius:999px;color:var(--accent);background:rgba(103,232,249,.07);font:500 .78rem var(--mono);margin-bottom:22px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px rgba(74,222,128,.8)}
-.hero h1{font:800 clamp(3.2rem,7vw,6.2rem)/.95 var(--display);letter-spacing:-.055em}
-.hero h1 .name{display:block}.hero h1 .role{display:block;color:transparent;background:linear-gradient(100deg,var(--accent),#b9a4ff);background-clip:text;-webkit-background-clip:text}
-.hero p.lead{margin:25px 0 32px;color:var(--muted);max-width:58ch;font-size:1.08rem}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;font-weight:700;text-decoration:none;border:1px solid var(--line);transition:.22s}
-.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#07111f;border-color:transparent;box-shadow:0 12px 30px rgba(103,232,249,.15)}
-.btn.primary:hover{transform:translateY(-2px)}
-.btn.ghost{background:rgba(255,255,255,.04);color:var(--text)}.btn.ghost:hover{border-color:var(--accent);transform:translateY(-2px)}
-.profile-wrap{display:grid;place-items:center;position:relative}
-.profile-wrap:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:linear-gradient(135deg,rgba(103,232,249,.24),rgba(139,92,246,.22));filter:blur(28px)}
-.profile-card{position:relative;padding:10px;border:1px solid var(--line);border-radius:30px;background:rgba(255,255,255,.055);box-shadow:0 30px 80px rgba(0,0,0,.3)}
-.profile-card img{display:block;width:min(360px,72vw);height:min(440px,88vw);object-fit:cover;border-radius:22px}
-.run{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.25);overflow:hidden;font:400 .83rem/1.9 var(--mono)}
-.run-head{padding:14px 18px;border-bottom:1px solid var(--line);color:var(--muted);display:flex;justify-content:space-between}
-.run-body{padding:21px}.run-body .d{font-weight:600;margin-bottom:8px}
-.t{display:flex;gap:10px;opacity:0;transform:translateY(4px);animation:in .35s forwards;color:var(--muted)}
-.t:before{content:"✓";color:var(--green);font-weight:700}.t.bug:before{content:"✗";color:var(--red)}
-.run-foot{padding:13px 18px;border-top:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--muted);opacity:0;animation:in .4s 2.4s forwards}
-.run-foot b{color:var(--green);font-weight:600}@keyframes in{to{opacity:1;transform:none}}
-section{padding:95px 0;border-top:1px solid var(--line)}
-.section-kicker{color:var(--accent);font:600 .78rem var(--mono);text-transform:uppercase;letter-spacing:.12em;margin-bottom:9px}
-h2{font:800 clamp(2rem,4vw,3rem)/1.05 var(--display);letter-spacing:-.04em;margin-bottom:10px}
-.sub{color:var(--muted);margin-bottom:35px;max-width:60ch}
-.about{display:grid;grid-template-columns:1.1fr .9fr;gap:55px}.about p{color:var(--muted)}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.stat,.group,.job,.edu div,.contact-list a{background:var(--card);border:1px solid var(--line)}
-.stat{border-radius:18px;padding:21px;transition:.22s}.stat:hover,.group:hover{transform:translateY(-3px);border-color:rgba(103,232,249,.35)}
-.stat strong{display:block;font:800 1.65rem var(--display)}.stat span{color:var(--muted);font-size:.9rem}
-.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.group{border-radius:18px;padding:23px;transition:.22s}
-.group h3{font:700 1.08rem var(--display);margin-bottom:14px}.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
-.chips li{border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:.82rem;background:rgba(255,255,255,.035);color:var(--muted)}
-.chips li.main{border-color:rgba(103,232,249,.35);color:var(--accent);background:rgba(103,232,249,.07);font-weight:600}
-.job{border-radius:20px;padding:30px;box-shadow:0 20px 55px rgba(0,0,0,.13)}
-.job-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:5px}.job h3{font:700 1.35rem var(--display)}
-.job .when{padding:5px 10px;border-radius:999px;background:rgba(103,232,249,.07);color:var(--accent);font:400 .78rem var(--mono)}
-.job .where{color:var(--muted);margin-bottom:20px}.job ul{padding-left:20px;display:grid;gap:10px;color:var(--muted)}
-.job li::marker{color:var(--accent)}
-.edu{display:grid;gap:14px}.edu div{border-radius:17px;padding:20px 22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;transition:.2s}
-.edu div:hover{border-color:rgba(139,92,246,.35)}.edu b{font-family:var(--display);font-size:1.05rem}.edu span{color:var(--muted)}
-.contact-list{display:grid;gap:12px;max-width:680px}.contact-list a{display:flex;justify-content:space-between;gap:16px;border-radius:15px;padding:16px 19px;text-decoration:none;font-weight:600;transition:.2s}
-.contact-list a:hover{transform:translateX(4px);border-color:rgba(103,232,249,.35)}.contact-list small{color:var(--muted);font-weight:400;font-size:.88rem}
-footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
-@media(max-width:900px){.hero,.about{grid-template-columns:1fr}.hero{min-height:auto;padding:65px 0 75px;gap:42px}.groups{grid-template-columns:1fr 1fr}}
-@media(max-width:650px){
-  .wrap{padding:0 17px}nav{height:64px}.nav-right{gap:10px}nav ul{gap:12px}nav ul li:nth-child(n+4){display:none}
-  .hero{padding:55px 0 65px}.hero h1{font-size:clamp(2.8rem,15vw,4.5rem)}.hero p.lead{font-size:1rem}
-  .profile-card img{width:min(310px,82vw);height:min(380px,100vw)}
-  section{padding:70px 0}.groups{grid-template-columns:1fr}.stats{gap:10px}.stat{padding:17px}.stat strong{font-size:1.35rem}
-  .job{padding:22px 19px}.job-top{display:block}.job .when{display:inline-block;margin-top:8px}
-  .contact-list a{display:block}.contact-list small{display:block;margin-top:4px}
+.theme-toggle {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.t,.run-foot{animation:none;opacity:1;transform:none}}
+
+.toggle-track {
+  width: 58px;
+  height: 32px;
+  display: block;
+  position: relative;
+  border-radius: 999px;
+  background: #17243a;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: inset 0 2px 6px rgba(0,0,0,.25);
+  transition: .3s ease;
+}
+.toggle-thumb {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #0b1728;
+  color: #c4d2e6;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  transition: .3s ease;
+  font-size: 15px;
+}
+
+.sun-icon {
+  display: none;
+}
+
+[data-theme="light"] .toggle-track {
+  background: #dbeafe;
+  border-color: rgba(8,145,178,.22);
+}
+
+[data-theme="light"] .toggle-thumb {
+  left: 29px;
+  background: #ffffff;
+  color: #f59e0b;
+}
+
+[data-theme="light"] .moon-icon {
+  display: none;
+}
+
+[data-theme="light"] .sun-icon {
+  display: block;
+}
+
+.theme-toggle:hover .toggle-track {
+  border-color: var(--accent);
+}
+
+.theme-toggle:active .toggle-thumb {
+  transform: scale(.9);
+}
 </style>
 </head>
 <body>
@@ -114,7 +122,14 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">☀️</button>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+  <span class="toggle-track">
+    <span class="toggle-thumb">
+      <span class="moon-icon">☾</span>
+      <span class="sun-icon">☀</span>
+    </span>
+  </span>
+</button>
       </div>
     </nav>
 </header>
@@ -219,8 +234,8 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 
   function applyTheme(value){
     root.setAttribute("data-theme", value);
-    button.textContent = value === "dark" ? "☀️" : "🌙";
-    button.setAttribute("aria-label", value === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    
+    button.button.classList.toggle("light-active", value === "light");("aria-label", value === "dark" ? "Switch to light mode" : "Switch to dark mode");
   }
 
   applyTheme(theme);
