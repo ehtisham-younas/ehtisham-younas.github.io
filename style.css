@@ -259,6 +259,7 @@ h1 {
 h1 .name {
   display: block;
   background: linear-gradient(135deg, var(--text) 40%, var(--muted));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -266,6 +267,7 @@ h1 .name {
 h1 .role {
   display: block;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -402,6 +404,7 @@ h2 {
   display: block;
   font-size: 1.8rem;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
