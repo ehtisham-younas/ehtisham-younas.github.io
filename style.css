@@ -370,24 +370,25 @@ h2 {
   border-radius: 20px;
   padding: 20px;
   box-shadow: var(--shadow-3d);
-  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-              box-shadow 0.35s ease, 
-              border-color 0.35s ease;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.2s ease, 
+              border-color 0.2s ease;
   will-change: transform;
-  -webkit-tap-highlight-color: transparent; /* Baseline: Yeh line add karni hai */
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Touch active JS class bilkul sahi hai */
 .card-3d.touch-active {
-  border-color: var(--accent);
-  transform: scale(0.98);
+  border-color: var(--accent) !important;
+  transform: scale(0.97) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Mobile active yahan se hata dein kyunki JS touch-active manage kar raha hai */
-.card-3d:hover {
-  transform: translateY(-4px) scale(1.01);
-  border-color: var(--accent);
-  box-shadow: 0 12px 25px -8px rgba(0, 0, 0, 0.2), 0 0 15px -5px var(--glow);
+@media (hover: hover) and (pointer: fine) {
+  .card-3d:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: var(--accent);
+    box-shadow: 0 12px 25px -8px rgba(0, 0, 0, 0.2), 0 0 15px -5px var(--glow);
+  }
 }
 
 .about {

@@ -87,23 +87,17 @@
     });
 
     document.querySelectorAll('.card-3d').forEach((card) => {
-  card.addEventListener(
-    'touchstart',
-    function () {
-      this.classList.add('touch-active');
-    },
-    { passive: true }
-  );
+  card.addEventListener('touchstart', function () {
+    this.classList.add('touch-active');
+  }, { passive: true });
 
-  card.addEventListener(
-    'touchend',
-    function () {
-      setTimeout(() => {
-        this.classList.remove('touch-active');
-      }, 150);
-    },
-    { passive: true }
-  );
+  card.addEventListener('touchend', function () {
+    this.classList.remove('touch-active');
+  }, { passive: true });
+
+  card.addEventListener('touchcancel', function () {
+    this.classList.remove('touch-active');
+  }, { passive: true });
 });
   }
 })();
