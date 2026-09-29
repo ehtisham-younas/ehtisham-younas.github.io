@@ -85,5 +85,25 @@
         behavior: "smooth"
       });
     });
+
+    document.querySelectorAll('.card-3d').forEach((card) => {
+  card.addEventListener(
+    'touchstart',
+    function () {
+      this.classList.add('touch-active');
+    },
+    { passive: true }
+  );
+
+  card.addEventListener(
+    'touchend',
+    function () {
+      setTimeout(() => {
+        this.classList.remove('touch-active');
+      }, 150);
+    },
+    { passive: true }
+  );
+});
   }
 })();
