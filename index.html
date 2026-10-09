@@ -1,174 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Ehtisham Younas | Software QA Engineer</title>
-<meta name="description" content="Software QA Engineer with 2+ years of experience in manual, automation, API and AI agent testing.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehtisham Younas | Software Quality Assurance Engineer</title>
+    <meta name="description" content="Ehtisham Younas, SQA Engineer with 2+ years of experience in manual, automation, Cypress, API testing with Postman, and AI agent testing.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ehtisham Younas | Software Quality Assurance Engineer">
+    <meta property="og:description" content="Manual and Automation Testing | Cypress | API & AI Agent Testing. Based in Rawalpindi, Pakistan.">
+    <meta property="og:url" content="https://ehtisham-younas.github.io/">
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <!-- Favicon Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-<link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div class="drawer-backdrop" id="drawerBackdrop"></div>
-
-<header>
-  <nav aria-label="Main">
-    <a class="logo" href="#top">Ehtisham <span>Younas</span></a>
-
-    <!-- Horizontal Scrollable Pill Nav for Mobile & Desktop -->
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#about" class="pill-link active">About</a></li>
-      <li><a href="#skills" class="pill-link">Skills</a></li>
-      <li><a href="#experience" class="pill-link">Experience</a></li>
-      <li><a href="#education" class="pill-link">Education</a></li>
-      <li><a href="#contact" class="pill-link">Contact</a></li>
-    </ul>
-
-    <div class="nav-right">
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
-        <span class="toggle-track">
-          <span class="toggle-thumb">
-            <i class="fa-solid fa-moon moon-icon"></i>
-            <i class="fa-solid fa-sun sun-icon"></i>
-          </span>
-        </span>
-      </button>
+    <div class="aur" aria-hidden="true">
+        <i></i><i></i><i></i>
     </div>
-  </nav>
-</header>
+    
+    <canvas id="bg" aria-hidden="true"></canvas>
 
-<main id="top" class="wrap">
-  <div class="hero">
-    <div>
-      <div class="eyebrow"><span class="dot"></span>Available for QA opportunities</div>
-      <h1><span class="name">Ehtisham Younas</span><span class="role">Software QA Engineer</span></h1>
-      <p class="lead">I test web, mobile and AI agent products, and automate the checks with Cypress so bugs get caught before release.</p>
-      <div class="btns">
-        <a class="btn primary" href="#experience">See my experience</a>
-        <a class="btn ghost" href="#contact">Get in touch</a>
-      </div>
-    </div>
-    <div class="profile-wrap">
-      <div class="profile-card">
-        <img src="profile.jpg" alt="Ehtisham Younas">
-      </div>
-    </div>
-  </div>
+    <!-- Navigation Header -->
+    <header>
+        <div class="wrap">
+            <nav aria-label="Main Navigation">
+                <a class="brand" href="#top">Ehtisham <span>Younas</span></a>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle-btn" id="theme" type="button" aria-label="Toggle theme">
+                    <i id="theme-icon" class="fa-solid fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-  <section id="about">
-    <div class="about">
-      <div class="card-3d">
-        <h2>About me</h2>
-        <p style="margin-top:14px;color:var(--muted)">I am a Software QA Engineer with 2+ years of hands-on experience in manual and automation testing for web and mobile applications. I design test cases, run regression and API checks, and track every defect until it is closed.</p>
-        <p style="margin-top:14px;color:var(--muted)">I work in Agile teams and have tested products across SaaS, AI, Business Listings, Logistics, Healthcare and Home Services, including AI agent-based applications.</p>
-      </div>
-      <div class="stats">
-        <div class="stat card-3d"><strong>2+</strong><span>Years of experience</span></div>
-        <div class="stat card-3d"><strong>6</strong><span>Domains tested</span></div>
-        <div class="stat card-3d"><strong>Web+Mobile</strong><span>Platforms covered</span></div>
-        <div class="stat card-3d"><strong>AI agents</strong><span>Tested end-to-end</span></div>
-      </div>
-    </div>
-  </section>
+    <main id="top">
+        <!-- Hero Section -->
+        <section class="hero">
+            <canvas id="fx" aria-hidden="true"></canvas>
+            <div class="wrap hgrid">
+                <div class="hero-content">
+                    <span class="badge">Available for QA opportunities</span>
+                    <h1>Ehtisham Younas</h1>
+                    <p class="role">Software Quality Assurance Engineer</p>
+                    <p class="sub">Manual and Automation Testing | Cypress | API & AI Agent Testing</p>
+                    <p>I test web, mobile and AI agent products, and automate the checks with Cypress so bugs get caught before release.</p>
+                    
+                    <div class="hero-actions">
+                        <a class="btn" href="Ehtisham's Resume.pdf" download="Ehtisham's Resume.pdf" role="button">Download Resume</a>
+                        <a class="btn o" href="#contact">Contact Me</a>
+                        <a class="btn o" href="https://www.linkedin.com/in/ehtisham-younas-ab06962a0" target="_blank" rel="noopener">View LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="ph">
+                    <div class="phi">
+                        <div class="orb"></div>
+                        <div class="orb r"></div>
+                        <div class="circ">
+                            <img src="profile.jpg" alt="Portrait of Ehtisham Younas" fetchpriority="high">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <p class="sub">Tools and methods I use in my day-to-day testing work.</p>
-    <div class="groups">
-      <div class="group card-3d"><h3>Automation testing</h3><ul class="chips"><li class="main">Cypress</li><li class="main">JavaScript</li></ul></div>
-      <div class="group card-3d"><h3>Manual testing</h3><ul class="chips"><li>Test case design</li><li>Regression testing</li><li>Smoke testing</li><li>Exploratory testing</li></ul></div>
-      <div class="group card-3d"><h3>AI application testing</h3><ul class="chips"><li>AI agent testing</li><li>Response validation</li><li>Tool call testing</li><li>Workflow testing</li></ul></div>
-      <div class="group card-3d"><h3>API & performance</h3><ul class="chips"><li class="main">Postman</li><li class="main">JMeter</li></ul></div>
-      <div class="group card-3d"><h3>Process & tracking</h3><ul class="chips"><li>Jira</li><li>Agile</li><li>Scrum</li><li>Git</li><li>GitHub</li></ul></div>
-      <div class="group card-3d"><h3>Domains</h3><ul class="chips"><li>SaaS</li><li>AI</li><li>E-commerce</li><li>Logistics</li><li>Healthcare</li><li>Home Services</li></ul></div>
-    </div>
-  </section>
+        <!-- About Section -->
+        <section id="about">
+            <div class="wrap rv">
+                <h2>About</h2>
+                <div class="abt">
+                    <p class="card" style="margin:0">
+                        I am a Software QA Engineer with 2+ years of hands-on experience in manual and automation testing for web and mobile applications. I design test cases, run regression and API checks, and track every defect until it is closed. I work in Agile teams and have tested products across SaaS, AI, Business Listings, Logistics, Healthcare and Home Services, including AI agent-based applications.
+                    </p>
+                    <div class="stats">
+                        <div class="card stat"><b>2+ years</b><span>Of QA experience</span></div>
+                        <div class="card stat"><b>6</b><span>Domains tested</span></div>
+                        <div class="card stat"><b>Web + Mobile</b><span>iOS and Android</span></div>
+                        <div class="card stat"><b>AI agents</b><span>Tested end to end</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <p class="sub">Multi-domain SaaS and AI products for Trillo Inc. (San Ramon, CA, USA).</p>
-    <article class="job card-3d">
-      <div class="job-top"><h3>Software Quality Assurance Engineer</h3><span class="when">Jul 2024 – Sep 2026</span></div>
-      <p class="where">Z-Axiss, Islamabad, Pakistan (Hybrid)</p>
-      <ul>
-        <li>Tested web and mobile applications, manually and with automation, across Business Listings, Logistics, Healthcare, Home Services and SaaS products.</li>
-        <li>Automated Business Listings and Logistics applications with Cypress and JavaScript, keeping the test code in GitHub repositories.</li>
-        <li>Tested deployed AI agents for response accuracy, tool calls, multi-step workflows and performance.</li>
-        <li>Designed, executed and maintained test cases and regression suites.</li>
-        <li>Tested APIs with Postman and validated backend workflows and endpoints.</li>
-        <li>Ran basic load tests with JMeter.</li>
-        <li>Logged, tracked and verified defects in Jira until they were closed.</li>
-        <li>Worked with developers and product teams in Agile sprints: planning, standups and retrospectives.</li>
-      </ul>
-    </article>
-  </section>
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="wrap rv">
+                <h2>Technical Skills</h2>
+                <p class="meta">The tools and methods behind my day-to-day testing work.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Manual Testing</h3>
+                        <ul class="tags">
+                            <li>Test Case Design</li>
+                            <li>Regression Testing</li>
+                            <li>Smoke Testing</li>
+                            <li>Exploratory Testing</li>
+                            <li>Functional Testing</li>
+                            <li>Integration Testing</li>
+                            <li>Mobile Testing</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Automation</h3>
+                        <ul class="tags">
+                            <li class="hl">Cypress</li>
+                            <li class="hl">JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>API & Performance</h3>
+                        <ul class="tags">
+                            <li class="hl">Postman</li>
+                            <li class="hl">JMeter</li>
+                            <li>REST API Validation</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>AI Application Testing</h3>
+                        <ul class="tags">
+                            <li>AI Agent Testing</li>
+                            <li>Response Validation</li>
+                            <li>Tool Call Testing</li>
+                            <li>Workflow Testing</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Tools & Process</h3>
+                        <ul class="tags">
+                            <li>Jira</li>
+                            <li>GitHub</li>
+                            <li>Git</li>
+                            <li>Agile / Scrum</li>
+                            <li>SDLC / STLC</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Domains</h3>
+                        <ul class="tags">
+                            <li>SaaS</li>
+                            <li>AI</li>
+                            <li>E-commerce</li>
+                            <li>Logistics</li>
+                            <li>Healthcare</li>
+                            <li>Home Services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <p class="sub"></p>
-    <div class="edu">
-      <div class="card-3d"><b>BS Software Engineering</b><span>Virtual University of Pakistan · Oct 2025 – Expected Oct 2029</span></div>
-      <div class="card-3d"><b>Intermediate</b><span>Govt. Denny's Higher Secondary School</span></div>
-      <div class="card-3d"><b>Matriculation</b><span>Govt. Aziz National High School</span></div>
-    </div>
-  </section>
+        <!-- Services Section -->
+        <section id="services">
+            <div class="wrap rv">
+                <h2>Services</h2>
+                <p class="meta">Where I can add value to your team or project.</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Manual & Functional Testing</h3>
+                        <p class="meta" style="margin:0">Test case design, execution, smoke, exploratory, regression, and integration testing.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Test Automation</h3>
+                        <p class="meta" style="margin:0">Cypress (JavaScript) test automation for web apps maintained in GitHub repositories.</p>
+                    </div>
+                    <div class="card">
+                        <h3>API Testing</h3>
+                        <p class="meta" style="margin:0">Postman API testing and validation of backend workflows and endpoints.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Web & Mobile Testing</h3>
+                        <p class="meta" style="margin:0">Browser-based web applications and mobile apps across iOS and Android platforms.</p>
+                    </div>
+                    <div class="card">
+                        <h3>AI Agent Testing</h3>
+                        <p class="meta" style="margin:0">Deployed AI agents response validation, tool call testing, and multi-step workflows.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Defect Management</h3>
+                        <p class="meta" style="margin:0">Jira defect logging, tracking, and verification aligned with Agile sprint ceremonies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section id="contact">
-  <h2>Contact</h2>
-  <p class="sub">Open to QA roles and testing projects. Email is the fastest way to reach me.</p>
-  <div class="contact-list">
-    <a class="card-3d" href="mailto:ehtishamyounas70@gmail.com">
-      <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-      <div class="contact-info">
-        <strong>Email</strong>
-        <small>ehtishamyounas70@gmail.com</small>
-      </div>
-    </a>
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="wrap rv">
+                <h2>Professional Experience</h2>
+                <p class="meta">Hands-on QA across web, mobile, SaaS, and AI products.</p>
+                <div class="tl">
+                    <article>
+                        <h3>Software Quality Assurance Engineer, Z-Axiss <span class="pill">Jul 2024 – Sep 2026</span></h3>
+                        <p class="meta">Islamabad, Pakistan (Hybrid)<br>Multi-domain SaaS and AI products for Trillo Inc. (San Ramon, CA, USA)</p>
+                        <ul class="b">
+                            <li>Tested web and mobile applications, manually and with automation, across Business Listings, Logistics, Healthcare, Home Services and SaaS products.</li>
+                            <li>Automated Business Listings and Logistics applications with Cypress and JavaScript, keeping the test code in GitHub repositories.</li>
+                            <li>Tested deployed AI agents for response accuracy, tool calls, multi-step workflows and performance.</li>
+                            <li>Designed, executed and maintained test cases and regression suites.</li>
+                            <li>Tested APIs with Postman and validated backend workflows and endpoints.</li>
+                            <li>Ran basic load tests with JMeter.</li>
+                            <li>Logged, tracked and verified defects in Jira until they were closed.</li>
+                            <li>Worked with developers and product teams in Agile sprints: planning, standups and retrospectives.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <a class="card-3d" href="tel:+923315653077">
-      <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-      <div class="contact-info">
-        <strong>Phone</strong>
-        <small>0331 5653077</small>
-      </div>
-    </a>
+        <!-- Education Section -->
+        <section id="education">
+            <div class="wrap rv">
+                <h2>Education</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>BS Software Engineering</h3>
+                        <p class="meta">Virtual University of Pakistan | Oct 2025 – Expected Oct 2029</p>
+                    </div>
+                    <div class="card">
+                        <h3>Intermediate</h3>
+                        <p class="meta">Govt. Denny's Higher Secondary School</p>
+                    </div>
+                    <div class="card">
+                        <h3>Matriculation</h3>
+                        <p class="meta">Govt. Aziz National High School</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <a class="card-3d" href="https://www.linkedin.com/in/ehtisham-younas-ab06962a0" target="_blank" rel="noopener">
-      <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-      <div class="contact-info">
-        <strong>LinkedIn</strong>
-        <small>Open profile</small>
-      </div>
-    </a>
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="wrap rv">
+                <h2>Contact</h2>
+                <p class="meta">Open to QA roles and testing projects. Email is the fastest way to reach me.</p>
+                <div class="grid contact-grid">
+                    <a class="card ct" href="mailto:ehtishamyounas70@gmail.com">
+                        <i><i class="fa-solid fa-envelope"></i></i>
+                        <div><strong>Email</strong><span>ehtishamyounas70@gmail.com</span></div>
+                    </a>
+                    <a class="card ct" href="tel:+923315653077">
+                        <i><i class="fa-solid fa-phone"></i></i>
+                        <div><strong>Phone</strong><span>0331 5653077</span></div>
+                    </a>
+                    <a class="card ct" href="https://www.linkedin.com/in/ehtisham-younas-ab06962a0" target="_blank" rel="noopener">
+                        <i><i class="fa-brands fa-linkedin-in"></i></i>
+                        <div><strong>LinkedIn</strong><span>Open profile</span></div>
+                    </a>
+                    <a class="card ct" href="https://github.com/ehtisham-younas" target="_blank" rel="noopener">
+                        <i><i class="fa-brands fa-github"></i></i>
+                        <div><strong>GitHub</strong><span>Open profile</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <a class="card-3d" href="https://github.com/ehtisham-younas" target="_blank" rel="noopener">
-      <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-      <div class="contact-info">
-        <strong>GitHub</strong>
-        <small>Open profile</small>
-      </div>
-    </a>
-  </div>
-  <p style="margin-top:24px;color:var(--muted);text-align:center">Based in Rawalpindi, Pakistan.</p>
-</section>
-</main>
-<footer>© 2026 Ehtisham Younas</footer>
-<a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top">
-  <i class="fa-solid fa-arrow-up"></i>
-</a>
+    <!-- Scroll To Top Button -->
+    <button id="up" class="up" type="button" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-<script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        Based in Rawalpindi, Pakistan<br>
+        &copy; <span id="yr"></span> Ehtisham Younas
+    </footer>
 
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
 </html>
