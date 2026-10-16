@@ -590,11 +590,11 @@ footer {
   padding: 24px 20px;
   text-align: center;
   color: var(--mut);
-  background: rgba(5, 11, 26, 0.4);
+  background: var(--card);
   border-top: 1px solid var(--line);
   font-size: 0.9rem;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 .rv {
