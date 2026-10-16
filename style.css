@@ -584,11 +584,17 @@ main, footer {
 }
 
 footer {
-  padding: 28px 0;
+  position: relative;
+  z-index: 2;
+  margin-top: 60px;
+  padding: 24px 20px;
   text-align: center;
   color: var(--mut);
+  background: rgba(5, 11, 26, 0.4);
   border-top: 1px solid var(--line);
-  background: var(--bg);
+  font-size: 0.9rem;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .rv {
